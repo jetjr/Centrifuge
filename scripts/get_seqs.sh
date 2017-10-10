@@ -19,7 +19,4 @@ module load samtools/1/1.3.1
 FASTA_BASE=$(basename $FASTA | cut -d '.' -f 1)
 HIT_BASE=$(basename $CENT_HIT | cut -d '-' -f 1)
 
-#echo $FILE_BASE
 xargs samtools faidx $FASTA < $OUT/$HIT_BASE-$ID.ids > $OUT/$FASTA_BASE-$ID.seqs
-#
-#done
