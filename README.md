@@ -76,3 +76,16 @@ png(filename=paste0(out.dir, paste0(file_name,".png")), width = 800, height = 80
 
 Axis Text Size (43):
 p2 <- p2 + theme(text = element_text(size=20), axis.text.x = element_text(angle = 90, hjust = 1)) 
+
+# Extract Sequences Matching Specified Taxonomy ID
+
+It is possible to extract sequences that were classified as a specified taxonomy ID by parsing the Centrifuge hits file. Instructions for doing so are as follows:
+
+1) Navigate to the scripts folder.
+2) Edit the get_seqs.sh file
+   CENT_HIT should be the FULL path to the centrifuge hits file 
+   FASTA should be the FULL path to the sequence file for the related centrifuge hit file
+   ID is the NCBI taxonomy ID that you want to extract reads that match to
+   OUT is the output directory of the ids and sequences
+3) Write and close file after editing variables
+4) Execute get_seqs.sh

@@ -14,11 +14,11 @@ export FASTA_DIR=""
 
 #Single or Paired End Reads? (single || paired)
 #IMPORTANT: For paired end files see README.md for additional information
-export TYPE="single"
+export TYPE=""
 
 #FASTA/Q File Extension (common extensions include fasta, fa, fastq, fastq)
 #DO NOT INCLUDE the dot "."
-export FILE_EXT="fq"
+export FILE_EXT=""
 
 #Centrifuge Report Out Directory
 export REPORT_DIR=""
@@ -32,10 +32,10 @@ export PLOT_FILE=""
 export PLOT_TITLE=""
 
 #File type (Fasta or Fastq | fasta = f; fastq = q)
-export FILE_TYPE="q"
+export FILE_TYPE=""
 
 #Exclude hits by stating taxid in following format ("taxid1,taxid2")
-export EXCLUDE="9606,32630"
+export EXCLUDE=""
 
 #Standard Error/Out Directory
 export STDERR_DIR="$CWD/std-err"
