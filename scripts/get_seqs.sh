@@ -12,6 +12,9 @@ export ID="277"
 #OUT DIRECTORY TO STORE SEQ IDS AND SEQUENCES
 export OUT="/rsgrps/bhurwitz/jetjr"
 
+module load unsupported
+module load markb/R/3.1.1
+
 ./centrifuge_tax_parse.R -f $CENT_HIT -i $ID -o $OUT
 
 module load samtools/1/1.3.1
