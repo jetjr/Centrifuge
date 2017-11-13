@@ -18,7 +18,7 @@ echo "FASTA files to be processed:" $(cat $FASTA_LIST)
 #RUN CENTRIFUGE ON ALL SEQUENCE FILES FOUND IN FASTA_DIR
 while read FASTA; do
   FILE_NAME=$(basename $FASTA | cut -d '.' -f 1)
-  /rsgrps/bhurwitz/jetjr/centrifuge/centrifuge -x $CENT_DB -U $FASTA -S $REPORT_DIR/$FILE_NAME-centrifuge_hits.tsv --report-file $REPORT_DIR/$FILE_NAME-centrifuge_report.tsv -$FILE_TYPE -p 12
+  centrifuge -x $CENT_DB -U $FASTA -S $REPORT_DIR/$FILE_NAME-centrifuge_hits.tsv --report-file $REPORT_DIR/$FILE_NAME-centrifuge_report.tsv -$FILE_TYPE -p 12 --exclude-taxids $EXCLUDE
 
 done < $FASTA_LIST
 
